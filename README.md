@@ -23,13 +23,13 @@ Algorytm przeszukiwania grafu, który eksploruje jak najdalej wzdłuż każdej g
 
 ## Problem
 
-Masz n kursów oznaczonych od 0 do n-1 oraz listę zależności między kursami, gdzie każda zależność jest parą (a, b), co oznacza, że kurs a musi być ukończony przed kursem b. 
+Jest n kursów oznaczonych od 0 do n-1 oraz lista zależności między kursami, gdzie każda zależność jest parą (a, b), co oznacza, że kurs a musi być ukończony przed kursem b. 
 
-Twoim zadaniem jest ustalenie kolejności, w jakiej kursy mogą być ukończone, tak aby wszystkie zależności były spełnione. Jeśli nie jest możliwe ukończenie wszystkich kursów (np. z powodu cyklu w zależnościach), algorytm powinien zwrócić pustą listę.
+Zadaniem jest ustalenie kolejności, w jakiej kursy mogą być ukończone, tak aby wszystkie zależności były spełnione. Jeśli nie jest możliwe ukończenie wszystkich kursów (np. z powodu cyklu w zależnościach), algorytm powinien zwrócić pustą listę.
 
 ### Zależności
 
-Na przykładzie jest 6 kursów
+Na przykładzie jest 6 kursów.
 
 ```md
 0 -> [2, 3]
