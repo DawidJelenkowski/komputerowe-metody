@@ -58,7 +58,7 @@ Na przykładzie jest 6 kursów.
 - Kurs 4: Ma zależność od kursu 5.
 - Kursy 2, 3, 5: Nie mają żadnych zależnych kursów.
 
-## Kod
+## Kod pisany w scala
 
 ```scala
 object UniversityCourses {
