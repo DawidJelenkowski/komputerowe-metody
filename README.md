@@ -162,64 +162,20 @@ object UniversityCourses {
 ```
 ## Przykłady zastosowania algorytmu
 
-### 1. Planowanie zadań (Task Scheduling)
+### Planowanie zadań i zarządzanie projektami
+Sortowanie topologiczne pozwala ustalić kolejność wykonywania zadań w projekcie, tak aby zadania zależne były realizowane po zadaniach, od których zależą. Dzięki temu można zoptymalizować harmonogram i uniknąć blokowania się zadań
 
-Sortowanie topologiczne jest używane do planowania zadań, które mają zależności. Na przykład, w systemach budowania oprogramowania, gdzie niektóre zadania muszą być wykonane przed innymi (np. kompilacja kodu źródłowego przed linkowaniem).
+### Wykrywanie cykli w grafie skierowanym
+Jeśli sortowanie topologiczne nie jest możliwe dla danego grafu, oznacza to, że graf zawiera cykl. Próba wykonania sortowania topologicznego z użyciem DFS może więc służyć do wykrywania cykli w grafach skierowanych
 
-Przykład:
+### Kompilacja programów i zarządzanie zależnościami
+Sortowanie topologiczne jest używane przez systemy budowania oprogramowania (np. make) do ustalenia kolejności kompilacji modułów z uwzględnieniem zależności między nimi. Pozwala to uniknąć problemów z brakującymi zależnościami
 
-- Kompilacja plików źródłowych w projekcie programistycznym, gdzie pliki zależą od siebie nawzajem.
-- Planowanie zadań w systemach operacyjnych, gdzie niektóre zadania muszą być wykonane przed innymi.
+### Szeregowanie kursów na uczelni
+Na podstawie zależności między kursami (wymagane zaliczenie jednych przed innymi) można za pomocą sortowania topologicznego ustalić prawidłową kolejność realizacji kursów przez studentów
 
-### 2. Zarządzanie zależnościami w projektach (Dependency Management)
+### Wykrywanie zakleszczeń w systemach operacyjnych
+Sortowanie topologiczne grafu zależności między procesami ubiegającymi się o zasoby pozwala wykryć potencjalne zakleszczenia w systemie operacyjnym
 
-
-W systemach zarządzania pakietami, takich jak Maven dla Javy czy npm dla JavaScriptu, sortowanie topologiczne jest używane do ustalania kolejności instalacji pakietów, które mają zależności.
-
-Przykład:
-
-  - Instalacja bibliotek w projekcie, gdzie niektóre biblioteki zależą od innych.
-  - Ustalanie kolejności ładowania modułów w aplikacjach.
-
-### 3. Analiza sieci (Network Analysis)
-
-Sortowanie topologiczne może być używane do analizy sieci, takich jak sieci przepływu pracy, sieci zależności w projektach, czy sieci transportowe.
-
-Przykład:
-
-  - Analiza przepływu pracy w projektach, gdzie niektóre etapy muszą być zakończone przed rozpoczęciem innych.
-  - Optymalizacja tras w sieciach transportowych.
-
-### 4. Rozwiązywanie równań różniczkowych (Solving Dependency Equations)
-
-W matematyce i inżynierii, sortowanie topologiczne może być używane do rozwiązywania systemów równań różniczkowych, gdzie niektóre zmienne zależą od innych.
-
-Przykład:
-
-  - Rozwiązywanie systemów równań w modelach matematycznych, gdzie zmienne muszą być obliczane w określonej kolejności.
-
-### 5. Analiza grafów (Graph Analysis)
-
-Sortowanie topologiczne jest używane w analizie grafów skierowanych acyklicznych (DAG), takich jak wykresy zależności w bazach danych czy grafy przepływu danych.
-
-Przykład:
-
-  - Analiza zależności w bazach danych, gdzie tabele mają klucze obce zależne od innych tabel.
-  - Analiza przepływu danych w systemach przetwarzania danych.
-
-### 6. Kompilacja i optymalizacja kodu (Compilation and Code Optimization)
-
-W kompilatorach, sortowanie topologiczne jest używane do optymalizacji kodu, gdzie instrukcje muszą być wykonane w określonej kolejności.
-
-Przykład:
-
-  - Optymalizacja kodu w kompilatorach, gdzie instrukcje muszą być uporządkowane w taki sposób, aby minimalizować zależności i maksymalizować wydajność.
-
-### 7. Rozwiązywanie problemów logicznych (Solving Logical Problems)
-
-Sortowanie topologiczne może być używane do rozwiązywania problemów logicznych, takich jak układanie harmonogramów czy rozwiązywanie łamigłówek.
-
-Przykład:
-
-  - Układanie harmonogramów zajęć, gdzie niektóre zajęcia muszą być zaplanowane przed innymi.
-  - Rozwiązywanie łamigłówek, gdzie elementy muszą być ułożone w określonej kolejności.
+### Analiza ścieżki krytycznej w zarządzaniu projektami
+Sortowanie topologiczne umożliwia wyznaczenie ścieżki krytycznej projektu, czyli najdłuższej sekwencji zależnych zadań, która determinuje minimalny czas realizacji całego projektu
