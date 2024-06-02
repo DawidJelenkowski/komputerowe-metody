@@ -1,11 +1,5 @@
 # Komputerowe metody optymalizacji i wspomagania decyzji
 
-Gr nr 6
-
-Dawid Jeleńkowski (174682)
-
-Maja Włoszczyńska (179395)
-
 ## Typ algorytmu
 
 Algorytm sortowania topologicznego przy użyciu przeszukiwania w głąb (DFS - Depth-First Search).
