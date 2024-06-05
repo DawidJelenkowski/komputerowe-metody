@@ -8,7 +8,7 @@ W tym projekcie algorytm rozwiązuje problem ustalania kolejności wykonywania k
 
 ### Sortowanie topologiczne
 
-Sortowanie topologiczne skierowanego grafu acyklicznego – liniowe uporządkowanie wierzchołków, w którym jeśli istnieje krawędź skierowana prowadząca od wierzchołka x {\displaystyle x} do y , {\displaystyle y,} to x {\displaystyle x} znajdzie się przed wierzchołkiem y . {\displaystyle y.} 
+Sortowanie topologiczne skierowanego grafu acyklicznego – liniowe uporządkowanie wierzchołków, w którym jeśli istnieje krawędź skierowana prowadząca od wierzchołka x do y , to x znajdzie się przed wierzchołkiem y.
 
 ### Przeszukiwanie w głąb (DFS - Depth-First Search)
 
