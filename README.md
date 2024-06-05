@@ -10,6 +10,7 @@ W tym projekcie algorytmy rozwiązują problem ustalania kolejności wykonywania
 
 ## Zależności
 
+### Instancja 1
 Na przykładzie jest graf z 6-oma kursami.
 
 ```md
@@ -21,15 +22,13 @@ Na przykładzie jest graf z 6-oma kursami.
 5 -> []
 ```
 
-#### Wizualizacja krok po kroku
+#### Wizualizacja instancji 1 krok po kroku
 
 - Start - Zaczynamy od kursu 1.
 - Kurs 1 - Ma zależności od kursów 0 i 4.
 - Kurs 0 - Ma zależności od kursów 2 i 3.
 - Kurs 4 - Ma zależność od kursu 5.
 - Kursy 2, 3, 5 - Nie mają żadnych zależnych kursów.
-
-#### Wizualizacja
 
 ```md
     1
@@ -39,10 +38,54 @@ Na przykładzie jest graf z 6-oma kursami.
 2   3   5
 ```
 
+Na przykładzie jest graf z 10-oma kursami.
+
+```md
+0 -> [2, 3]
+1 -> [0, 4]
+2 -> [6]
+3 -> [7]
+4 -> [5]
+5 -> [9]
+6 -> [2]
+7 -> [0]
+8 -> [0]
+9 -> [0]
+```
+
+#### Wizualizacja instancji 2 krok po kroku
+
+- Start - Zaczynamy od kursu 1.
+- Kurs 1 - Ma zależności od kursów 0 i 4.
+- Kurs 0 - Ma zależności od kursów 2 i 3.
+- Kurs 4 - Ma zależność od kursu 5.
+- Kurs 2 - Ma zależność od kursu 6.
+- Kurs 3 - Ma zależność od kursu 7.
+- Kurs 5 - Ma zależność od kursu 9.
+- Kurs 6 - Ma zależność od kursu 8.
+- Kursy 8, 7, 9 - Nie mają żadnych zależnych kursów.
+
+```md
+    1
+   / \
+  0   4
+ / \ / \
+2   3   5
+|   |   |
+6   7   9
+|
+8
+
 ## DFS
 ### Typ algorytmu
 
 Algorytm sortowania topologicznego przy użyciu przeszukiwania w głąb (DFS - Depth-First Search).
+
+
+- Złożoność czasowa O(n + m)
+- Złożoność przestrzenna O(n + m)
+
+Całkowita złożoność przestrzenna algorytmu wynosi O(n + m), gdzie n to liczba kursów, a m to liczba zależności.
 
 #### Sortowanie topologiczne
 
@@ -211,6 +254,11 @@ Sortowanie topologiczne umożliwia wyznaczenie ścieżki krytycznej projektu, cz
 
 BFS to algorytm używany do przeszukiwania lub przechodzenia przez grafy i drzewa. BFS eksploruje graf poziomami, zaczynając od wierzchołka początkowego i odwiedzając wszystkie jego sąsiednie wierzchołki przed przejściem do wierzchołków na następnym poziomie.
 
+- Złożoność czasowa O(n + m)
+- Złożoność przestrzenna O(n + m)
+
+Całkowita złożoność czasowa i przestrzenna algorytmu wynosi O(n + m), gdzie n to liczba kursów, a m to liczba zależności.
+
 ### Opis kodu
 
 #### Inicjalizacja
@@ -218,9 +266,9 @@ Dodaj wierzchołek początkowy do kolejki i oznacz go jako odwiedzony.
 
 #### Przetwarzanie wierzchołków
   Dopóki kolejka nie jest pusta
-  - 1. Usuń wierzchołek z kolejki.
-  - 2. Odwiedź wszystkich sąsiadów tego wierzchołka, którzy nie zostali jeszcze odwiedzeni.
-  - 3. Dodaj tych sąsiadów do kolejki i oznacz ich jako odwiedzonych.
+  - Usuń wierzchołek z kolejki.
+  - Odwiedź wszystkich sąsiadów tego wierzchołka, którzy nie zostali jeszcze odwiedzeni.
+  - Dodaj tych sąsiadów do kolejki i oznacz ich jako odwiedzonych.
 
 #### Kontynuacja
 Powtarzaj proces, aż wszystkie wierzchołki zostaną odwiedzone lub kolejka będzie pusta.
@@ -235,13 +283,13 @@ Powtarzaj proces, aż wszystkie wierzchołki zostaną odwiedzone lub kolejka bę
 2   3   5
 ```
 
-Start od 1.
-Odwiedź 1, dodaj 0 i 4 do kolejki.
-Odwiedź 0, dodaj 2 i 3 do kolejki.
-Odwiedź 4, dodaj 5 do kolejki.
-Odwiedź 2 (brak nowych sąsiadów).
-Odwiedź 3 (brak nowych sąsiadów).
-Odwiedź 5 (brak nowych sąsiadów).
+- Start od 1.
+- Odwiedź 1, dodaj 0 i 4 do kolejki.
+- Odwiedź 0, dodaj 2 i 3 do kolejki.
+- Odwiedź 4, dodaj 5 do kolejki.
+- Odwiedź 2 (brak nowych sąsiadów).
+- Odwiedź 3 (brak nowych sąsiadów).
+- Odwiedź 5 (brak nowych sąsiadów).
 
 Kolejność odwiedzania wierzchołków: 1 -> 0 -> 4 -> 2 -> 3 -> 5
 

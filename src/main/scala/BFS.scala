@@ -37,8 +37,10 @@ object UniCoursesBFS {
   }
 
   def main(args: Array[String]): Unit = {
-    println(findOrder(2, List((0, 1)))) // List(1, 0)
-    println(findOrder(3, List((0, 1), (1, 2), (2, 0)))) // List()
-    println(findOrder(6, List((0, 1), (2, 0), (3, 0), (4, 1), (5, 4)))) // List(1, 4, 5, 0, 3, 2)
+    val startTime = System.nanoTime()
+    println(findOrder(6, List((0, 1), (2, 0), (3, 0), (4, 1), (5, 4)))) // List(1, 0, 4, 2, 3, 5)
+    val endTime = System.nanoTime()
+    val duration = (endTime - startTime) / 1e6 // Konwersja na milisekundy
+    println(s"Czas wykonania: $duration ms")
   }
 }
