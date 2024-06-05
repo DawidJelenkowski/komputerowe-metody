@@ -34,6 +34,14 @@ Na przykładzie jest 6 kursów.
 5 -> []
 ```
 
+### Wizualizacja krok po kroku
+
+- Start: Zaczynamy od kursu 1.
+- Kurs 1: Ma zależności od kursów 0 i 4.
+- Kurs 0: Ma zależności od kursów 2 i 3.
+- Kurs 4: Ma zależność od kursu 5.
+- Kursy 2, 3, 5: Nie mają żadnych zależnych kursów.
+
 ### Wizualizacja
 
 ```md
@@ -44,13 +52,29 @@ Na przykładzie jest 6 kursów.
 2   3   5
 ```
 
-### Wizualizacja krok po kroku
+## Opis kodu
 
-- Start: Zaczynamy od kursu 1.
-- Kurs 1: Ma zależności od kursów 0 i 4.
-- Kurs 0: Ma zależności od kursów 2 i 3.
-- Kurs 4: Ma zależność od kursu 5.
-- Kursy 2, 3, 5: Nie mają żadnych zależnych kursów.
+### Wejście
+- n: liczba kursów.
+- prerequisites: lista par (a, b), gdzie kurs a musi być ukończony przed kursem b.
+
+### Wyjście
+Lista kursów w kolejności, w jakiej mogą być ukończone, spełniając wszystkie zależności. Jeśli nie jest możliwe ukończenie wszystkich kursów, zwróć pustą listę.
+
+### Reprezentacja grafu
+Graf jest reprezentowany jako mapa, gdzie klucze to kursy, a wartości to zbiory kursów, które są bezpośrednio zależne od klucza.
+
+### Inicjalizacja
+Tworzenie mapy zależności na podstawie listy prerequisites.
+
+### DFS z rekurencją
+Użycie rekurencyjnej funkcji orderTailrec do przeszukiwania grafu w głąb. Funkcja śledzi odwiedzone wierzchołki (expanding), wierzchołki, które zostały w pełni przetworzone (expanded), oraz buduje listę uporządkowanych kursów (order).
+
+### Wykrywanie cykli:
+Jeśli podczas przeszukiwania algorytm napotka wierzchołek, który jest już w trakcie eksploracji, oznacza to, że graf zawiera cykl, co uniemożliwia sortowanie topologiczne. W takim przypadku algorytm zwraca pustą listę.
+
+### Zwracanie wyniku
+Jeśli wszystkie kursy mogą być ukończone, algorytm zwraca listę kursów w kolejności topologicznej.
 
 ## Kod pisany w scala
 
