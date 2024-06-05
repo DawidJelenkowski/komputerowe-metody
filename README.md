@@ -75,6 +75,7 @@ Na przykładzie jest graf z 10-oma kursami.
 6   7   9
 |
 8
+```
 
 ## DFS
 ### Typ algorytmu
