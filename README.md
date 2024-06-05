@@ -2,7 +2,7 @@
 
 ## Problem
 
-Jest n kursów oznaczonych od 0 do n-1 oraz lista zależności między kursami, gdzie każda zależność jest parą (a, b), co oznacza, że kurs a musi być ukończony przed kursem b. 
+Jest n kursów oznaczonych od 0 do n-1 oraz lista zależności między kursami, gdzie każda zależność jest parą (a, b), co oznacza, że kurs A musi być ukończony przed kursem B. 
 
 Zadaniem jest ustalenie kolejności, w jakiej kursy mogą być ukończone, tak aby wszystkie zależności były spełnione. Jeśli nie jest możliwe ukończenie wszystkich kursów (np. z powodu cyklu w zależnościach), algorytm powinien zwrócić pustą listę.
 
@@ -37,7 +37,7 @@ Na przykładzie jest graf z 6-oma kursami.
 2   3   5
 ```
 
-## DFS
+## DFS (DFS - Depth-First Search)
 ### Typ algorytmu
 
 Algorytm sortowania topologicznego przy użyciu przeszukiwania w głąb (DFS - Depth-First Search).
@@ -146,9 +146,35 @@ Powtarzaj proces, aż wszystkie wierzchołki zostaną odwiedzone lub kolejka bę
 
 Kolejność odwiedzania wierzchołków: 1 -> 0 -> 4 -> 2 -> 3 -> 5
 
+### Przykłady zastosowania algorytmu BFS
+
+#### Znajdowanie najkrótszej ścieżki
+Znajdowanie najkrótszej ścieżki w grafie nieskierowanym lub skierowanym, gdzie wszystkie krawędzie mają tę samą wagę. BFS gwarantuje znalezienie najkrótszej ścieżki od wierzchołka początkowego do każdego innego wierzchołka.
+
+#### Przeszukiwanie grafów
+Przeszukiwanie wszystkich wierzchołków w grafie lub drzewie. Jest to podstawowa operacja w wielu algorytmach grafowych.
+
+#### Sprawdzanie spójności grafu
+Sprawdzanie czy graf jest spójny, czyli czy istnieje ścieżka między dowolnymi dwoma wierzchołkami.
+
+#### Rozwiązywanie problemów logicznych
+Rozwiązywanie łamigłówek i problemów logicznych, gdzie celem jest znalezienie rozwiązania w minimalnej liczbie kroków.
+
+#### Generowanie drzew minimalnych
+Generowanie drzew minimalnych w grafach nieskierowanych, co jest przydatne w optymalizacji sieci.
+
+#### Wykrywanie cyklów
+Wykrywanie cyklów w grafach skierowanych i nieskierowanych.
+
+#### Algorytmy przepływu w sieciach
+BFS jest używany w algorytmach przepływu w sieciach, takich jak algorytm Forda-Fulkersona do znajdowania maksymalnego przepływu w sieci.
+
+#### Algorytmy klasteryzacji
+BFS może być używany do klasteryzacji wierzchołków w grafach, co jest przydatne w analizie danych i uczeniu maszynowym.
+
 ## Instancja 2
 
-Na przykładzie jest graf z 10-oma kursami.
+Tym razem jest graf z 10-oma kursami.
 
 ```md
 0 -> [2, 3]
@@ -186,30 +212,18 @@ Na przykładzie jest graf z 10-oma kursami.
 |
 8
 ```
+## Wnioski
 
+### Iteracja 1
+Średni czas wykonania dla n równego 6 DFS: 0.093951836 ms
+Średni czas wykonania dla n równego 6 BFS: 0.02536306 ms
+Średnia różnica w czasie w 10 000 iteracjach między algorytmami: 0.06858877599999999 ms
 
-### Przykłady zastosowania algorytmu BFS
+### Iteracja 2
+Średni czas wykonania dla n równego 10 DFS: 0.102176766 ms
+Średni czas wykonania dla n równego 10 BFS: 0.035778946000000006 ms
+Średnia różnica w czasie w 10 000 iteracjach między algorytmami: 0.06639782 ms
 
-#### Znajdowanie najkrótszej ścieżki
-Znajdowanie najkrótszej ścieżki w grafie nieskierowanym lub skierowanym, gdzie wszystkie krawędzie mają tę samą wagę. BFS gwarantuje znalezienie najkrótszej ścieżki od wierzchołka początkowego do każdego innego wierzchołka.
-
-#### Przeszukiwanie grafów
-Przeszukiwanie wszystkich wierzchołków w grafie lub drzewie. Jest to podstawowa operacja w wielu algorytmach grafowych.
-
-#### Sprawdzanie spójności grafu
-Sprawdzanie czy graf jest spójny, czyli czy istnieje ścieżka między dowolnymi dwoma wierzchołkami.
-
-#### Rozwiązywanie problemów logicznych
-Rozwiązywanie łamigłówek i problemów logicznych, gdzie celem jest znalezienie rozwiązania w minimalnej liczbie kroków.
-
-#### Generowanie drzew minimalnych
-Generowanie drzew minimalnych w grafach nieskierowanych, co jest przydatne w optymalizacji sieci.
-
-#### Wykrywanie cyklów
-Wykrywanie cyklów w grafach skierowanych i nieskierowanych.
-
-#### Algorytmy przepływu w sieciach
-BFS jest używany w algorytmach przepływu w sieciach, takich jak algorytm Forda-Fulkersona do znajdowania maksymalnego przepływu w sieci.
-
-#### Algorytmy klasteryzacji
-BFS może być używany do klasteryzacji wierzchołków w grafach, co jest przydatne w analizie danych i uczeniu maszynowym.
+Przy zwiększeniu n o 4 dla algorytmu DFS czas wzrósł o 0.087544111431734021674680205292 ms
+Przy zwiększeniu n o 4 dla algorytmu BFS czas wzrósł o 0.410671504148159015513112376819 ms
+Natomiast średnia różnica w czasie w 10 000 iteracjach między algorytmami zmalała o 0.031943360528842070595247322804 ms
