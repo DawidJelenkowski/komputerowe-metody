@@ -1,4 +1,4 @@
-object UniversityCourses {
+object UniCoursesDFS {
 
   // Define a type alias for a graph where nodes are of type Int and edges are represented as sets of Int
   type Graph[T] = Map[T, Set[T]]
