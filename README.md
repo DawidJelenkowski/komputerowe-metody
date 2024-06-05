@@ -214,16 +214,16 @@ Tym razem jest graf z 10-oma kursami.
 ```
 ## Wnioski
 
-### Iteracja 1
-Średni czas wykonania dla n równego 6 DFS: 0.093951836 ms
-Średni czas wykonania dla n równego 6 BFS: 0.02536306 ms
-Średnia różnica w czasie w 10 000 iteracjach między algorytmami: 0.06858877599999999 ms
+### Instancja 1
+- Średni czas wykonania dla n równego 6 DFS: 0.093951836 ms
+- Średni czas wykonania dla n równego 6 BFS: 0.02536306 ms
+- Średnia różnica w czasie w 10 000 iteracjach między algorytmami: 0.06858877599999999 ms
 
-### Iteracja 2
-Średni czas wykonania dla n równego 10 DFS: 0.102176766 ms
-Średni czas wykonania dla n równego 10 BFS: 0.035778946000000006 ms
-Średnia różnica w czasie w 10 000 iteracjach między algorytmami: 0.06639782 ms
+### Instancja 2
+- Średni czas wykonania dla n równego 10 DFS: 0.102176766 ms
+- Średni czas wykonania dla n równego 10 BFS: 0.035778946000000006 ms
+- Średnia różnica w czasie w 10 000 iteracjach między algorytmami: 0.06639782 ms
 
-Przy zwiększeniu n o 4 dla algorytmu DFS czas wzrósł o 0.087544111431734021674680205292 ms
-Przy zwiększeniu n o 4 dla algorytmu BFS czas wzrósł o 0.410671504148159015513112376819 ms
-Natomiast średnia różnica w czasie w 10 000 iteracjach między algorytmami zmalała o 0.031943360528842070595247322804 ms
+- Przy zwiększeniu n o 4 dla algorytmu DFS czas wzrósł o 0.087544111431734021674680205292 ms
+- Przy zwiększeniu n o 4 dla algorytmu BFS czas wzrósł o 0.410671504148159015513112376819 ms
+- Natomiast średnia różnica w czasie w 10 000 iteracjach między algorytmami zmalała o 0.031943360528842070595247322804 ms
