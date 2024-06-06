@@ -46,7 +46,7 @@ Algorytm sortowania topologicznego przy użyciu przeszukiwania w głąb (DFS - D
 - Złożoność czasowa O(n + m)
 - Złożoność przestrzenna O(n + m)
 
-Całkowita złożoność przestrzenna algorytmu wynosi O(n + m), gdzie n to liczba kursów, a m to liczba zależności.
+Całkowita złożoność czasowa i przestrzenna algorytmu wynosi O(n + m), gdzie n to liczba kursów, a m to liczba zależności.
 
 #### Sortowanie topologiczne
 
